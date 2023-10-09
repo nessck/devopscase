@@ -1,9 +1,1 @@
 
-Question 1:  
-I made two different attempts. First of all, I wanted to try it with terraform since I haven't used it before. I created a service called gpuappservice. In the second attempt, I deployed it under gpunodepool using gcloudshell, with the machine type n1-standard-1.
-Question 2
-I compiled the Deployment.yaml file by specifying image -q2 image- and providing the PUBSUB_SUBSCRIPTION_NAME environment variable. I added external secrets with Helm. I deployed pubsub-secret.yaml using ExternalSecret, and I tried argocd-app.yaml to deploy argocd-app from scratch.
-Question 3
-I tried both from console and with deployment file. I installed Custom Resource Definitions (CRDs with another yaml file that contain specifications for CRD.
-Question 4
-I also added the gitlab-ci yaml I did not have the opportunity to try/implement it.
