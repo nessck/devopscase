@@ -1,0 +1,21 @@
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "q3"
+  namespace: "default"
+  labels:
+    app: "q3"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "q3"
+  template:
+    metadata:
+      labels:
+        app: "q3"
+    spec:
+      containers:
+      - name: "q3image-sha256-1"
+        image: "gcr.io/neslihan-codeway/q3image:latest"

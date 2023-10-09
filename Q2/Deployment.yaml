@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pubsub-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pubsub
+  template:
+    metadata:
+      labels:
+        app: pubsub
+    spec:
+      containers:
+      - name: pubsub-container
+        image: gcr.io/neslihan-codeway/q2image:latest
+        env:
+        - name: PUBSUB_SUBSCRIPTION_NAME
+          valueFrom:
+            secretKeyRef:
+              name: pubsub-secret
+              key: SUBSCRIPTION_NAME
